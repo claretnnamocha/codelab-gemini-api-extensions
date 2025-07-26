@@ -89,8 +89,8 @@ const ChatPage = () => {
     // Send a message to Gemini Extension.
     const newMessageRef = await addDoc(messagesCollection, {
       // TODO: 1. Replace code next line with this:
-      // prompt: preparePrompt(userMsg, messages),
-      prompt: userMsg,
+      prompt: preparePrompt(userMsg, messages),
+      // prompt: userMsg,
     });
     console.log("New message added with ID: ", newMessageRef.id);
   };
